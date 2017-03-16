@@ -1,0 +1,396 @@
+@mixin tieude{
+		color:#5a5a5a;
+		font-size: 40px;
+}
+*{margin:0px;
+padding:0px;}
+h1,h2,h3,h4,h5,h6,ul, li{
+	margin:0px;
+	padding:0px;
+}
+a, a:hover{
+	text-decoration:none;
+}
+ul, li{
+	list-type:none;
+}
+html,body{
+	width:100%;
+	height: 100%;
+	background:#e3e3e3;
+}
+header{
+	article.branking{
+		max-width: 100%;
+		min-height:66px; 
+		background: #1e88e5;
+		.col-sm-12{
+			text-align: right;
+		}
+		a{
+			color:#145e9e;
+			font-weight:500;
+			line-height: 66px;
+			display: inline-block;
+			padding:0px 33px;
+			font-size: 20px;
+		}
+	}
+	nav.navbar.navbar-light.bg-faded{
+		background:#2196f3;
+		min-height: 83px;
+		margin:0px;
+		padding:0px;
+		position:fixed;
+		z-index: 1;
+		width: 100%;
+		ul.nav.navbar-nav{
+			flex-direction: row;
+			li.nav-item {
+				display: inline-block;
+				float: left;
+				a.nav-link{
+					display: inline-block;
+					padding:42px 20px 26px 20px;
+					color:#fff;
+					text-transform: uppercase;
+					font-weight: 500;
+					&:hover {
+						border-bottom:2px solid #fff;
+					}
+				}
+			}
+		}
+	}
+	nav div.collapse.navbar-collapse{
+		display:block;
+	}
+	.navbar-nav{
+		flex-direction: row;
+	}
+}
+//style about
+section.about{
+	background:#e3e3e3;
+	padding-top:200px;
+	div.noidung{
+		position: relative;
+		padding-top:172px;
+		text-align: center;
+		background:#ffffff;
+		padding-bottom:194px;
+		img{
+			position:absolute;
+			left:50%;
+			top:0%;
+			margin-left:-76px;
+			border-radius:50% 50%; 
+			width: 152px;
+			height: 152px;
+			margin-top:-76px;
+		}
+		h3{
+			
+			font-size: 30px;
+			color:#646464;
+			text-transform: capitalize;
+			padding-bottom:16px;
+		}
+		h4{
+			color:#909091;
+			text-transform: capitalize;
+			padding-bottom:32px;
+		}
+		.col-sm-offset-3{
+			max-width: 50%;
+			margin:auto;
+			p{
+				color:#909091;
+				font-weight: 500;
+				font-size: 16px;
+			}
+		}
+	}
+}
+//style skill
+section.skill{
+	div.tren{
+		background:#e3e3e3;
+		padding-top:24px;
+		text-align: center;
+		padding-bottom:45px;
+	}
+	h3.tieude{
+		color:#5a5a5a;
+		font-size: 40px;
+		i{
+			color:#5a5a5a;
+			font-size: 40px;
+		}
+	}
+	div.duoi{
+		background:#2196f3;
+		color:#fff;
+		padding-top:65px;
+		h3{
+			color:#ffffff;
+			font-size: 30px;
+			padding-bottom:41px;
+		}
+		h4{
+			font-size: 17px;
+			padding-bottom:15px;
+			padding-left:63px;
+		}
+		div.thanhtruot{
+			position:relative;
+			max-width: 344px;
+			min-height: 4px;
+			background:gray;
+			margin-bottom:36px;
+			margin-left:63px;
+			div.trang{
+				content:"";
+				position:absolute;
+				width: 50%;
+				height: 100%;
+				display: block;
+				left:0%;
+				top:0%;
+				background:#ffffff;
+				z-index: 1;
+			}
+			div.tron{
+				content:"";
+				width: 14px;
+				height: 14px;
+				background:#ffffff;
+				position:absolute;
+				left:50%;
+				top:50%;
+				display: block;
+				margin-top:-7px;
+				border-radius:50%;
+			}
+		}
+	}
+}
+// style education
+section.education{
+	h3.tieude{
+		@include tieude;
+		background:#e3e3e3;
+		padding-top:24px;
+		text-align: center;
+		padding-bottom:45px;
+	}
+	div._1noidung.trai{
+		background:#ffffff;
+		padding-top:71px;
+		text-align: center;
+		position:relative;
+		box-shadow:2px 5px 5px #c9c9c9; 
+		width: 41.6666666%;
+		h3{
+			color:#646464;
+			font-size: 18px;
+		}
+		h4{
+			font-size: 15px;
+			color:#70bbf7;
+			padding-top:17px;
+		}
+		p{
+			padding-bottom:66px;
+			color:#646464;
+			font-size: 13px;
+		}
+		&:after{
+			content:"";
+			display: block;
+			position:absolute;
+			width: 29px;
+			height: 30px;
+			background:url(../images/canhan/Untitled-2.png) no-repeat center center;
+			top:0%;
+			left: 100%;
+			z-index: 1;
+		}
+	}
+	div.row.phai{
+		display: flex;
+    	justify-content: flex-end;
+    	div._1noidung.trai.phai:after{
+			left:0%;
+			background:url("../images/canhan/Untitled-1.png") no-repeat;
+			margin-left:-29px;
+		}
+	}
+	.gachgiua{
+		position:relative;
+		&:after{
+		content:"";
+		position:absolute;
+		width: 2px;
+		height: 100%;
+		background:#c9c9c9;
+		left:50%;
+		top:0%;
+		z-index: 1;
+		}
+		&:before{
+			content:"";
+			position:absolute;
+			width: 2px;
+			height: 200px;
+			background:url(../images/canhan/Untitled-4.png) no-repeat;
+			left:50%;
+			bottom:0%;
+			z-index: 2;
+		}
+	}
+}
+.gachgiua .col-sm-12{
+	position:relative;
+	.tron{
+		content: "";
+	    background: #2196f3;
+	    position: absolute;
+	    width: 16px;
+	    height: 16px;
+	    border-radius: 50%;
+	    left: 50%;
+	    top: 0%;
+	    z-index: 3;
+	    margin-left: -8px;
+	}
+}
+footer{
+	margin-top:16px;
+}
+footer .col-sm-12{
+	background:#ffffff;
+	min-height:116px;
+	p {
+		display:flex;
+		flex-direction:row;
+		align-items: center;
+		margin-bottom: 0px;
+		justify-content: center;
+		span{
+			float: left;
+			padding-right:0px;
+				a{
+				display: inline-block;
+				padding:30px 60px;
+				position:relative;
+				float: left;
+					.hinhnho{
+						position:absolute;
+						z-index: 1;
+						left:10%;
+						top:-20%;
+						display: inline-block;
+						background:#323232;
+						padding:10px 30px;
+						visibility: hidden;
+						text-transform: capitalize;
+						color:#fff;
+					}
+					i{
+						font-size: 40px;
+					}
+					&:hover .hinhnho{
+						animation:hienra 0.4s forwards;
+						transform-origin: bottom ;
+					}
+				}
+			}
+		}
+}
+@keyframes hienra{
+	0%{
+		visibility: hidden;
+		transform:scale(0);
+		opacity: 0;
+	}
+	100%{
+		visibility: visible;
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+@media (max-width:960px){
+	footer .col-sm-12 p span a{
+		padding:10px 15px;
+	}
+}
+
+@media (max-width: 768px)
+{
+	header article.branking .col-sm-12{
+		text-align: center;
+	}
+	header article.branking a{
+		padding:10px 4px;
+	}
+	header nav.navbar.navbar-light.bg-faded ul.nav.navbar-nav{
+		flex-direction: column;
+	}
+	.hidden-sm-up{
+		display: block !important;
+		float: left;
+		position:relative;
+		left:0%;
+	}
+	header nav.navbar.navbar-light.bg-faded ul.nav.navbar-nav li.nav-item a.nav-link:hover{
+		border-bottom:0px;
+	}
+	header nav.navbar.navbar-light.bg-faded ul.nav.navbar-nav li.nav-item{
+		border-bottom:2px solid #ffffff;
+	}
+	header nav div.navbar-toi{
+		display: none;
+	}
+	header nav div.navbar-toi.hien{
+		display: block;
+	}
+}
+@media (max-width:556px){
+	.gachgiua .col-sm-12 .tron{
+		display: none;
+	}
+	section.education .gachgiua:after{
+		display: none;
+	}
+	section.education .gachgiua:before{
+		display: none;
+	}
+	section.education div._1noidung.trai{
+		width: 100%;
+		margin-top:5px;
+	}
+	footer .col-sm-12 p{
+		text-align: center;
+	}
+	footer .col-sm-12 p span{
+		float: left;
+		width: 50%;
+		display: block;
+	}
+	footer .col-sm-12 p span a{
+		display: block;
+		width: 100%;
+	}
+	
+}
+@media (max-width:320px){
+	footer .col-sm-12 p span a{
+		padding:10px 15px;
+	}
+}
+//hieu ung
+header nav.navbar.navbar-light.bg-faded.bura {
+	top:0%
+}
+
