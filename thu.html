@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/enscroll-0.6.2.min.js"></script>		
+</head>
+<style>
+    .slide{
+        margin:auto;
+        width: 50%;
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+    }
+    .slide ._1slide{
+        margin:auto;
+        width: 100%;
+        position: absolute;
+        left:0;
+        top:0;
+        display: none;
+    }
+    .slide ._1slide img{
+        max-width: 100%;
+    }
+    .slide ._1slide.active{
+        display: block;
+    }
+    ._1slide.active.dira{
+        animation:dira 2s forwards;
+    }
+    @keyframes dira{
+        0%{
+            display: block;
+            left:0%;
+        }
+        100%{
+            display:none; 
+            left:100%;
+        }
+    }
+
+</style>
+<script>
+	$(document).ready(function() {
+        $("._1slide.active").addClass("dira");
+        
+	});
+</script>
+    <div class="slide">
+        <div class="_1slide active">
+            <img src="http://img.f30.vnecdn.net/2017/03/16/Thutuong-1489653283_490x294.jpg">
+        </div>
+        <div class="_1slide">
+            <img src="http://img.f30.vnecdn.net/2017/03/16/Thutuong-1489653283_490x294.jpg">
+        </div>
+        <div class="_1slide">
+            <img src="http://img.f30.vnecdn.net/2017/03/16/Thutuong-1489653283_490x294.jpg">
+        </div>
+        
+    </div>
+</body>
+</html>

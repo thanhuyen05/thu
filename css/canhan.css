@@ -55,6 +55,22 @@ header nav div.collapse.navbar-collapse {
   display: block; }
 header .navbar-nav {
   flex-direction: row; }
+header .navbar-toi {
+  position: relative; }
+header a.back-home {
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 50%;
+  background: #f267c5;
+  z-index: 1;
+  display: block;
+  top: 30%;
+  margin-top: -5px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-weight: bold; }
 
 section.about {
   background: #e3e3e3;
@@ -219,6 +235,45 @@ section.education .gachgiua {
     top: 0%;
     z-index: 3;
     margin-left: -8px; }
+
+section.portfolio {
+  padding-top: 66px;
+  position: relative; }
+  section.portfolio .hien {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    position: relative; }
+    section.portfolio .hien:hover div._1noidung {
+      visibility: visible;
+      opacity: 0.5;
+      top: 0%; }
+  section.portfolio h3.tieude {
+    padding-bottom: 66px;
+    color: #5a5a5a;
+    font-size: 40px; }
+    section.portfolio h3.tieude i {
+      padding-right: 20px; }
+  section.portfolio div._1noidung {
+    position: absolute;
+    left: 20%;
+    width: 226px;
+    height: 157px;
+    background: #5a5a5a;
+    z-index: 0;
+    visibility: visible;
+    transition: 1s;
+    opacity: 0;
+    top: 100%; }
+    section.portfolio div._1noidung h3 {
+      padding-top: 100px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 30px; }
+  section.portfolio img {
+    width: 226px;
+    height: 157px;
+    cursor: pointer; }
 
 footer {
   margin-top: 16px; }
